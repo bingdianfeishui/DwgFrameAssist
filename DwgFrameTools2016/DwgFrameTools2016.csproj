@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{19A02960-1899-4AEE-8B0D-9377866136D2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DwgFrameAssist</RootNamespace>
+    <AssemblyName>DwgFrameAssist2016</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\AutoCAD Plugin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;R20</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\..\AutoCAD Plugin\Release\</OutputPath>
+    <DefineConstants>TRACE;R20</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AcCoreMgd">
+      <HintPath>C:\ObjectARX 2016\inc\AcCoreMgd.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="AcDbMgd">
+      <HintPath>C:\ObjectARX 2016\inc\AcDbMgd.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="AcMgd">
+      <HintPath>C:\ObjectARX 2016\inc\AcMgd.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\DwgFrameAssist\DwgFrameTools.cs">
+      <Link>DwgFrameTools.cs</Link>
+    </Compile>
+    <Compile Include="..\DwgFrameAssist\DwgGenerator.cs">
+      <Link>DwgGenerator.cs</Link>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="..\DwgFrameAssist\DwgGenerator.designer.cs">
+      <Link>DwgGenerator.designer.cs</Link>
+      <DependentUpon>DwgGenerator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\DwgFrameAssist\DwgInfo.cs">
+      <Link>DwgInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\DwgFrameAssist\myCommands.cs">
+      <Link>myCommands.cs</Link>
+    </Compile>
+    <Compile Include="..\DwgFrameAssist\myCommands.designer.cs">
+      <Link>myCommands.designer.cs</Link>
+      <DependentUpon>myCommands.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\DwgFrameAssist\myPlugin.cs">
+      <Link>myPlugin.cs</Link>
+    </Compile>
+    <Compile Include="..\DwgFrameAssist\SingleDwgInfo.cs">
+      <Link>SingleDwgInfo.cs</Link>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="..\DwgFrameAssist\SingleDwgInfo.designer.cs">
+      <Link>SingleDwgInfo.designer.cs</Link>
+      <DependentUpon>SingleDwgInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\DwgFrameAssist\UpdateCheck.cs">
+      <Link>UpdateCheck.cs</Link>
+    </Compile>
+    <Compile Include="..\DwgFrameAssist\XmlUtil.cs">
+      <Link>XmlUtil.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="..\DwgFrameAssist\DwgGenerator.resx">
+      <Link>DwgGenerator.resx</Link>
+      <DependentUpon>DwgGenerator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\DwgFrameAssist\myCommands.resx">
+      <Link>myCommands.resx</Link>
+      <DependentUpon>myCommands.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\DwgFrameAssist\SingleDwgInfo.resx">
+      <Link>SingleDwgInfo.resx</Link>
+      <DependentUpon>SingleDwgInfo.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\DwgFrameAssist\Autodesk AutoCAD.ico">
+      <Link>Autodesk AutoCAD.ico</Link>
+    </Content>
+    <Content Include="..\DwgFrameAssist\config.xml">
+      <Link>config.xml</Link>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

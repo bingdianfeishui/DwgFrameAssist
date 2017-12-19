@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Configuration>
+  <!-- 软件信息 -->
+  <version value="离线刷图工具 v0.91 beta &#x000A;2017-02-07"/>
+  <!-- 默认是否勾选强制覆盖 -->
+  <override value="true"/>
+  <!-- 新图存储路径，注意用/或\\ -->
+  <dwgFolder value="D:/PDMFile/"/>
+  <!-- 标准图库相对路径，注意用/或\\ -->
+  <sourceFolder value="标准图框/"/>
+  <!-- 添加辅助区域标记线（测试用） -->
+  <markArea value="false"/>
+  <!-- 正副标题的分割字符，默认为^(shift + 6) -->
+  <separator value="^"/>
+  <!-- 副标题默认字高 -->
+  <h2Height value="5"/>
+  <!-- 副标题前缀 -->
+  <prefix value="("/>
+  <!-- 副标题后缀 -->
+  <suffix value=")"/>
+  <!-- 图框块名称 -->
+  <frameBlockName value="FitPDM_DWGFrame"/>
+  <!-- 图框图层名称 -->
+  <tittleLayerName value="PDM_Title"/>
+  <!-- 加载时检查更新 -->
+  <checkUpdateOnLoad value="true"/>
+  <!-- 更新路径 -->
+  <updatePath value="\\10.0.0.226\文件交换\电站控制部\小工具\图框修改器\DwgFrameAssist dll插件版"/>
+  <!-- updatePath value="D:\"/ -->
+  <!-- 图幅设置 -->
+  <dwgtype type="部套">
+    <dwgs direction="横向">
+      <dwg size="297x210"/>
+      <dwg size="420x297"/>
+      <dwg size="594x420"/>
+      <dwg size="841x594"/>
+      <dwg size="1189x841"/>
+	  <dwg size="1338x841"/>
+	  <dwg size="1486x841"/>
+	  <dwg size="1635x841"/>
+    </dwgs>
+    <dwgs direction="纵向">
+      <dwg size="210x297" />
+      <dwg size="297x420" />
+      <dwg size="420x594" />
+      <dwg size="594x841" />
+      <dwg size="841x1189" />
+    </dwgs>
+  </dwgtype>
+  <dwgtype type="零件">
+    <dwgs direction="横向">
+      <dwg size="297x210"/>
+      <dwg size="420x297"/>
+      <dwg size="594x420"/>
+      <dwg size="841x594"/>
+      <dwg size="1189x841"/>
+	  <dwg size="1338x841"/>
+    </dwgs>
+    <dwgs direction="纵向">
+      <dwg size="210x297" />
+      <dwg size="297x420" />
+      <dwg size="420x594" />
+      <dwg size="594x841" />
+      <dwg size="841x1189" />
+    </dwgs>
+  </dwgtype>
+  <!-- 启动时显示帮助信息 -->
+  <showHelp value="true"/>
+  <help value="离线刷图工具 &#x0009;&#x0009;【点击左下'帮助'标签可显示或隐藏帮助】&#x000A;
+
+左侧为属性设置区，可设置的参数分为【基本属性】、【公共属性】和【私有属性】。右侧为图纸信息显示表格。&#x000A;
+其中，任何公共属性更改时，所有表格行的公共属性都会刷新。私有属性可针对所选择的单行或多行进行设置。&#x000A;
+另外，表格内【图纸名称】及【比例】、【重量】单元格可单独修改，双击相应单元格或点击单元格后按F2后可更改，完成后按Enter保存。&#x000A;
+&#x000A;
+☆☆ 注意：&#x000A;
+☆☆ 1、手动更改公共属性【图纸名称】单元格后，不要在左侧属性设置框再次更改【图纸名称】，否则会刷新所有行的该属性。&#x000A;
+☆☆ 2、图纸名称支持双行名称（即主标题和副标题)，两行标题间用默认分隔符'^'分隔开即可。&#x000A;
+☆☆ 如：某张图纸名称为“第一行名称^副标题名称”(不含引号)。最后生成到图纸上的名称格式为：&#x000A;
+☆☆     第一行名称       (7号字，居中)&#x000A;
+☆☆    (副标题名称)      (5号字，居中)&#x000A;
+☆☆ 3、config.xml中有一些设置项，有兴趣者可自行研究。
+"/>
+</Configuration>
